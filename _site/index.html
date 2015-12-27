@@ -1,14 +1,10 @@
----
-title : My Booklet
----
-
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<title>{{ site.name }}</title>
+		<title>Jekyll Booklet</title>
 		<link rel="shortcut icon" href="../favicon.ico">
 
 		<!-- Layered Menu -->
@@ -34,35 +30,28 @@ title : My Booklet
 
 				<!-- mp-menu -->
 				<nav id="mp-menu" class="mp-menu">
-							{% if site.tags.first[0] != null %}
+							
 								<div class="mp-level">
 								<h2 class="icon icon-world">Index</h2>
 								<ul>
-								{% for cat in site.tags %}
+								
 									<li class="icon icon-arrow-left">
-										<a class="icon icon-news" href="#">{{ cat[0] | replace:'_',' ' }}</a>
+										<a class="icon icon-news" href="#">About</a>
 										<div class="mp-level">
-											<h2 class="icon icon-news">{{ cat[0] | replace:'_',' ' }}</h2>
+											<h2 class="icon icon-news">About</h2>
 											<ul class="menu-toc">
-												{% for post in cat[1] reversed %}
-													<li class="page-link"><a href="#item">{{ post.title }}</a></li>
-												{% endfor %}
+												
+													<li class="page-link"><a href="#item">Jekklet</a></li>
+												
+													<li class="page-link"><a href="#item">Jekyll Booklet</a></li>
+												
 											</ul>
 										</div>
 									</li>
-								{% endfor %}
+								
 								</ul>
 								</div>
-							{% else %}
-								<div class="mp-level" style="overflow:auto;">
-								<h2 class="icon icon-world">Index</h2>
-								<ul>
-								{% for post in site.posts reversed %}
-									<li class="page-link"><a href="#item">{{ post.title }}</a></li>
-								{% endfor %}
-								</ul>
-								</div>
-							{% endif %}			
+										
 						
 				</nav>
 				<!-- /mp-menu -->
@@ -70,19 +59,37 @@ title : My Booklet
 				<div class="scroller"><!-- this is for emulating position fixed of the nav -->
 					<div class="bb-custom-wrapper">
 				<div id="bb-bookblock" class="bb-bookblock">
-					{% for post in site.posts reversed %}
+					
 						<div class="bb-item" id="item">
 							<div class="content">
 								<div class="scroller1">
 									
-									<h2>{{ post.title }}</h2>
+									<h2>Jekklet</h2>
 									
-									{{ post.content }}
+									<p>Jekyll Booklet is an easy way to publish beautiful, single-paged, simple-indexed HTML Books through <a href="http://jekyllrb.com" target="_blank">Jekyll</a> , &quot;a simple, blog aware, static site generator&quot;. This beautiful theme used to make markdown files appear like pages in a book, is a merge of two awesome layouts, <a href="http://tympanus.net/codrops/2012/12/11/fullscreen-pageflip-layout/" target="_blank">FullScreenBookBlock</a> and <a href="http://tympanus.net/codrops/2013/08/13/multi-level-push-menu/" target="_blank">MultiLevelPushMenu</a>. Only the merge and some modifications were done by <a href="http://chintanghate.herokuapp.com/about" target="_blank">me</a>, the major part of theme is work of <a href="http://tympanus.net/codrops/author/crnacura/" target="_blank">Mary Lou</a> at <a href="http://tympanus.net/codrops/" target="_blank">codrops</a>.</p>
+
+<p>You can flip pages of this booklet, using arrow keys on keyboard, arrow buttons on top-left of page and touch gestures.</p>
+
 								
 								</div>
 							</div>
 						</div>
-					{% endfor %}
+					
+						<div class="bb-item" id="item">
+							<div class="content">
+								<div class="scroller1">
+									
+									<h2>Jekyll Booklet</h2>
+									
+									<p>Jekyll Booklet is an easy way to publish beautiful, single-paged, simple-indexed HTML Books through <a href="http://jekyllrb.com" target="_blank">Jekyll</a> , &quot;a simple, blog aware, static site generator&quot;. This beautiful theme used to make markdown files appear like pages in a book, is a merge of two awesome layouts, <a href="http://tympanus.net/codrops/2012/12/11/fullscreen-pageflip-layout/" target="_blank">FullScreenBookBlock</a> and <a href="http://tympanus.net/codrops/2013/08/13/multi-level-push-menu/" target="_blank">MultiLevelPushMenu</a>. Only the merge and some modifications were done by <a href="http://chintanghate.herokuapp.com/about" target="_blank">me</a>, the major part of theme is work of <a href="http://tympanus.net/codrops/author/crnacura/" target="_blank">Mary Lou</a> at <a href="http://tympanus.net/codrops/" target="_blank">codrops</a>.</p>
+
+<p>You can flip pages of this booklet, using arrow keys on keyboard, arrow buttons on top-left of page and touch gestures.</p>
+
+								
+								</div>
+							</div>
+						</div>
+					
 				</div>
 				
 				<nav>
